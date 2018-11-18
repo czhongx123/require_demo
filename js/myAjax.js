@@ -60,7 +60,7 @@ define(['module','jquery','md5','store','tip'],function(module,$,md5,store,tip){
                 dataType:'json',
                 success:function(data,status,jqXHR){
 
-                    if(data.result){
+                    if(data.state==200){
                         if(params.callback){
                             params.callback(data.data,status,jqXHR)
                         }
@@ -86,11 +86,6 @@ define(['module','jquery','md5','store','tip'],function(module,$,md5,store,tip){
                 }
                 
             })
-
-
-
-            console.log(md5('哈哈'))
-            return
         }
    }
 
