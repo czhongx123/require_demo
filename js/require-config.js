@@ -7,16 +7,13 @@ function requireConfig(){
 
     // css集合
     window.cssCollection={
-        homePage:""
+        homePage:"css!./css/homePage.css"
     }
 
-  
-
-
-
     // 入口脚本
-    requirejs.config({
-        baseUrl:'',
+    require.config({
+        baseUrl:'',//配置基目录
+        urlArgs:'v='+(new Date()).getTime(),
         paths:{
             // 常用插件
             "jquery":'./plugins/jquery/jquery-2.1.4.min',
@@ -38,17 +35,20 @@ function requireConfig(){
             "*":{
                 'css':'./plugins/require/css'//这个是引入css必须的文件
             }
-        },
+            
+        },//"map"告诉RequireJS在任何模块之前，都先载入这个模块
         shim:{
             "swiper":{
                 deps:["css!./plugins/swiper/swiper-3.4.2.min.css"]
             }
+           
         }
     })
 
-    var page=document.getElementsByTagName('html')[0].getAttribute('data-file')
-    console.log(page)
-    require(['jquery','store',page],function($,store,page){
+    var page=document.getElementsByTagName('html')[0].getAttribute('data-file');
+    var pageCss= window.cssCollection[page];
+    console.log(pageCss)
+    require([page],function(page){
        
     })
    
