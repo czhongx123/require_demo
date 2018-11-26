@@ -21,6 +21,7 @@ function requireConfig(){
             "vue":"./plugins/vue/vue.min",
             "swiper":"./plugins/swiper/swiper-3.4.2.min",
             "md5":"./plugins/md5/md5",
+            "spop":'./plugins/tip/dist/spop',
 
 
             //自定义插件
@@ -40,7 +41,11 @@ function requireConfig(){
         shim:{
             "swiper":{
                 deps:["css!./plugins/swiper/swiper-3.4.2.min.css"]
-            }
+            },
+            "spop":{
+                deps:["css!./plugins/tip/dist/spop.css"],
+                exports:"spop"
+            }//加载非AMD的插件用此方法
            
         }
     })

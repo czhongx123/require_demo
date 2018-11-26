@@ -1,6 +1,6 @@
 
 
-define(['module'],function(module){
+define(['module','spop'],function(module,spop){
     var tip={
         getTip:function(params){
             spop({
