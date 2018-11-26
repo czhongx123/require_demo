@@ -12,7 +12,7 @@ function requireConfig(){
 
     // 入口脚本
     require.config({
-        baseUrl:'',//配置基目录
+        baseUrl:'./src/js',//配置基目录
         urlArgs:'v='+(new Date()).getTime(),
         paths:{
             // 常用插件
@@ -25,12 +25,12 @@ function requireConfig(){
 
 
             //自定义插件
-            "util":"./js/util",
-            "myAjax":"./js/myAjax",
-            "tip":"./js/tip",
+            "util":"./util",
+            "myAjax":"./myAjax",
+            "tip":"./tip",
 
             //私有js
-            "homePage":"./js/myapp/homePage"
+            "homePage":"./myapp/homePage"
         },
         map:{
             "*":{
@@ -43,11 +43,11 @@ function requireConfig(){
                 deps:["css!./plugins/swiper/swiper-3.4.2.min.css"]
             },
             "spop":{
-                deps:["css!./plugins/tip/dist/spop.css"],
+                deps:["css!./plugins/tip/dist/spop.css"],//表明该模块的依赖
                 exports:"spop"
             }//加载非AMD的插件用此方法
            
-        }
+        }//那些没有使用define()来声明依赖关系的模块进行配置
     })
 
     var page=document.getElementsByTagName('html')[0].getAttribute('data-file');
