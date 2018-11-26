@@ -50,12 +50,12 @@ function requireConfig(){
         }//那些没有使用define()来声明依赖关系的模块进行配置
     })
 
-    var page=document.getElementsByTagName('html')[0].getAttribute('data-file');
-    var pageCss= window.cssCollection[page];
-    console.log(pageCss)
-    require([page],function(page){
+    // var page=document.getElementsByTagName('html')[0].getAttribute('data-file');
+    // var pageCss= window.cssCollection[page];
+    // console.log(pageCss)
+    // require([page],function(page){
        
-    })
+    // })
    
 
 }
