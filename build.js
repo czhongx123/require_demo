@@ -6,6 +6,7 @@
     name:'./src/js/myapp/homePage.js',//所需要打包的模块
     optimize: "uglify",//压缩代码的方式（默认，可不写）
     optimizeCss: "standard.keepLines",//css优化方式：除标准压缩外，保留换行
+    // out:''//导出单个文件
 })
 
 
