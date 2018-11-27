@@ -1,0 +1,1 @@
+define(["module"],function(e){var t={getQueryString:function(e){var t=new RegExp("(^|&)"+e+"=([^&]*)(&|$)"),n=window.location.search.substr(1).match(t);return n!=null?unescape(n[2]):null}};return t});

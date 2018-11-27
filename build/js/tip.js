@@ -1,0 +1,1 @@
+define(["module","spop"],function(e,t){var n={getTip:function(e){t({template:e.content,position:"top-center",style:e.type,autoclose:1500})}};return n});

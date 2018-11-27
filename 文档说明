@@ -1,0 +1,20 @@
+
+--index.html
+--login.html
+--src
+--build             //使用r.js打包后的模块
+--r.js              //r.js的源文件
+--app.build.js      //r.js打包的配置文件
+--main.js           //各个模块均引入。作为入口文件。包含开发模式和上线模式的切换，打包前和打包后文件的引用
+                    //目前为空，待补充
+
+
+文件打包命令：node r.js -o app.build.js
+
+
+注意：css-builder.js 和normalize.js 文件为打包css所必须引入的插件，且必须放在和require.js放在一起
+
+
+
+
+

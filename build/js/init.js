@@ -1,0 +1,1 @@
+(function(){var e={config:{ipA1:"http://localhost:80/api1",ipA2:"http://localhost:80/api2",ipB1:"http://www.aa/api1",ipB2:"http://www.aa/api2",devMode:!0}}})();

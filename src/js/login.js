@@ -1,7 +1,7 @@
-define(['toast'],function(toast){
+require(['tip'],function(tip){
 
 
-    toast.getTip({
+    tip.getTip({
         content:"已登录",
         type:'success'
     })

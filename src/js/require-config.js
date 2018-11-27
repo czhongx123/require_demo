@@ -1,14 +1,9 @@
 
-(function(window){
 
-requireConfig()
 
-function requireConfig(){
 
-    // css集合
-    window.cssCollection={
-        homePage:"css!./css/homePage.css"
-    }
+
+
 
     // 入口脚本
     require.config({
@@ -30,7 +25,8 @@ function requireConfig(){
             "tip":"./tip",
 
             //私有js
-            "homePage":"./myapp/homePage"
+            "homePage":"./homePage",
+            "login":"./login"
         },
         map:{
             "*":{
@@ -43,7 +39,7 @@ function requireConfig(){
                 deps:["css!./plugins/swiper/swiper-3.4.2.min.css"]
             },
             "spop":{
-                deps:["css!./plugins/tip/dist/spop.css"],//表明该模块的依赖
+                deps:["css!./plugins/tip/dist/spop.css"],//表明该模块的依赖,数组中的为依赖
                 exports:"spop"
             }//加载非AMD的插件用此方法
            
@@ -57,11 +53,6 @@ function requireConfig(){
        
     // })
    
-
-}
-
-
-})(window)
 
 
 

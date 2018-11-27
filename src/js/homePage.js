@@ -1,6 +1,6 @@
 
 
-define(['vue','jquery','myAjax','swiper'],function(Vue,$,myAjax,Swiper){
+require(['vue','jquery','myAjax','swiper'],function(Vue,$,myAjax,Swiper){
 
 
 
